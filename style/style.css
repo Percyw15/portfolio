@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.795)), url(../assets/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    margin: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon_select{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.icon_select_information {
+    padding: 0px;
+    margin: 0px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+}
+main {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#icon_profile {
+    border-color: #AA912B;
+    border-radius: 100%;
+    border:  5px solid #AA912B;
+}
+.welcome {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#welcome_text {
+   font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+    font-size: 28px;
+    color: #AA912B;
+}
+#welcome_apresentation {
+    display: inline;
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+}
+#nick {
+    color: #AA912B;
+}
+.informations{
+background-image: url(../assets/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border:  5px solid #AA912B;
+    border-radius: 10px;
+    width: 40vw;
+    height: 40vh;
+}
