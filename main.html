@@ -5,24 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style/style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div id="about-me" class="icon_select"><img class="icon" src="/assets/about-me.svg" alt=""><p class="icon_select_information">About-me</p></div>
-        <div id="projects" class="icon_select"><img class="icon" src="assets/projects.svg" alt=""><p class="icon_select_information">Projects</p></div>
-        <div id="contact" class="icon_select"><img class="icon" src="assets/contact.svg" alt=""><p class="icon_select_information">Contact</p></div>
+        <div id="about-me" class="header_button"><img class="header_button_icon" src="/assets/header/about-me.svg" alt=""><p class="header_button_information">About-me</p></div>
+        <div id="projects" class="header_button"><img class="header_button_icon" src="assets/header/projects.svg" alt=""><p class="header_button_information">Projects</p></div>
+        <div id="contact" class="header_button"><img class="header_button_icon" src="assets/header/contact.svg" alt=""><p class="header_button_information">Contact</p></div>
     </header>
-    <main>
-        <img id="icon_profile" src="/assets/king 1.png" alt="icon_profile">
-        <div class="welcome">
-            <div id='welcome_text'>Welcome</div>        
-            <div id="welcome_apresentation">To the <span id="nick">Percy_w15</span> portfolio</div>
+    <section class="hero">
+        <img class="icon_profile" src="/assets/hero/king 1.png" alt="icon_profile">
+        <p class='emphasis-italic'>Welcome</p>        
+        <h1>To the <span class="emphasis">Percy_w15</span> portfolio</h1>
+    </section>
+    <section class="features">
+        <div class="feature-column-1">
+            <div class="skill">
+                <img src="assets/features/cross.svg" alt="Christian Icon">
+                <h3>Christian</h3>    
+            </div>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum dicta minus voluptatibus fugit consequuntur iure! Accusantium expedita qui illum dolore doloremque quibusdam. Ratione ipsum, atque nihil voluptates error cum.</p>
         </div>
-        <div class="informations">
-            
+        <div class="feature-column-1">
+            <div class="skill"> 
+                <img src="assets/features/control.svg" alt="Control Icon">
+                <h3>Game Developer</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus rerum vel in saepe, maxime exercitationem, aspernatur, magnam aliquam beatae ipsam repellendus. Ullam, nostrum tenetur! Neque corporis voluptas delectus laboriosam dicta?</p>
         </div>
-        
-    </main>
+        <div class="feature-column-2">
+            <div class="skill">
+                <img src="assets/features/database.svg" alt="">
+                <h3>Database</h3>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, facilis exercitationem reprehenderit repellat incidunt recusandae, ab deleniti amet quidem voluptatibus rem eaque est adipisci! Tempore, officiis velit? Saepe, delectus? Asperiores.</p>
+        </div>
+        <div class="feature-column-2">
+            <div class="skill">
+                <img src="assets/features/site.svg" alt="">
+                <h3>Web Developer</h3>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam a sapiente quod atque repudiandae aliquam? Sed ipsa, ut corrupti nulla fugit quisquam, natus nobis velit et inventore asperiores repudiandae soluta.</p>
+        </div>
+    </section>
 </body>
 </html>
