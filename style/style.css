@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to bottom, #09080E, #141320, #09080E);
+    background-size: unset;
     background-color: #000;
     color: white;
     font-size: 1rem;
@@ -18,16 +19,21 @@ body {
     gap: 60px;
     margin: 0;
     padding: 0;
+        min-height: 100vh;
 }
+
+
 
 /* Header */
 header {
     margin-left: 18.81vw;
+    
     margin-top: 6.46vh;
     display: flex;
     gap: 60px;
 }
 .header_button {
+
     height: 60px;
     width: 110px;
     border-radius: 10px;
@@ -41,9 +47,8 @@ header {
     transition: border 0.3s;
 }
 .header_button:hover {
-    border: 2px solid white;
+    cursor: pointer;
 }
-
 .header_button_icon {
     height: 30px;
     width: 30px;
@@ -52,12 +57,12 @@ header {
     font-size: 1rem;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-bottom: 60px;
 }
 .icon_profile {
     height: 150px;
@@ -81,17 +86,18 @@ h1 {
     font-size: 1.4rem;
 }
 
-/* Features Section */
 .features {
-    margin: 0 auto;
+    margin-left: 18.11vw;
+    margin-right: 18.11vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
 .feature {
     display: flex;
+    
     align-items: center;
-    width: 30.948vw;
+    width: 29.948vw;
     height: 130px;
     gap: 30px;
 }
@@ -114,19 +120,20 @@ h1 {
     height: 90px;
 }
 .feature_information {
-
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-left: 2px solid white;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 .feature_information > p {
     font-weight: 400;
     line-height: 30px;
-    letter-spacing: 2px;
     font-size: 16px;
 }
 
-/* Responsividade */
-@media (max-width: 1370px) and (max-height: 900px) {
+@media (max-width: 1370px)  {
     body {
         gap: 60px;
         padding: 60px 0;
@@ -164,6 +171,10 @@ h1 {
     .feature_information > p {
         
         font-size: 18px;
-        line-height: 20px;
+        line-height: 25px;
+        letter-spacing: 1px;
     }
+}
+#about-me {
+    border: 2px solid white;
 }
