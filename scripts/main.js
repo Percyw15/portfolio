@@ -41,3 +41,8 @@ fetch(`https://${url}/pages/about-me.html`)
                 document.getElementById('content').innerHTML = data;
             })
             .catch(error => alert('Erro ao carregar o HTML:', error));
+
+self.addEventListener('install', event =>{
+    event.waitUntil()
+    cashes.open('')
+})
