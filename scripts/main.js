@@ -2,7 +2,7 @@ const about_me = document.getElementById('about-me')
 const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
 let currentPageId = about_me.id;
-
+let url = 'percyw15.tech'
 function getPage(id) {
     console.log(id,currentPageId)
     if (id == currentPageId) {
@@ -12,7 +12,7 @@ function getPage(id) {
     else {
         document.getElementById(id).style.border = "2px solid white";
         document.getElementById(currentPageId).style.border = "2px solid transparent";
-        fetch(`http:///pages/${id}.html`)
+        fetch(`http://${url}/pages/${id}.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
@@ -35,7 +35,7 @@ contact.addEventListener('click',function(){
    getPage(contact.id);
     
 });
-fetch('http:///pages/about-me.html')
+fetch(`http://${url}/pages/about-me.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
