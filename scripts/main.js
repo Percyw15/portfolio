@@ -12,7 +12,7 @@ function getPage(id) {
     else {
         document.getElementById(id).style.border = "2px solid white";
         document.getElementById(currentPageId).style.border = "2px solid transparent";
-        fetch(`http://${url}/pages/${id}.html`)
+        fetch(`https://${url}/pages/${id}.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
@@ -35,7 +35,7 @@ contact.addEventListener('click',function(){
    getPage(contact.id);
     
 });
-fetch(`http://${url}/pages/about-me.html`)
+fetch(`https://${url}/pages/about-me.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
