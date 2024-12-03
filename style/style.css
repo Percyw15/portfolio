@@ -1,6 +1,6 @@
 /* Importação de fontes (remoção de duplicatas) */
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Solway:wght@300;400;500;700;800&display=swap');
 /* Reset e Estilos Gerais */
 * {
     margin: 0;
@@ -10,10 +10,10 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, #09080E, #141320, #09080E);
     background-size: unset;
-    background-color: #000;
-    color: white;
+    background-color: #ffffff;
+    
+    color: rgb(0, 0, 0);
     font-size: 1rem;
     font-family: "Ubuntu", sans-serif;
     gap: 60px;
@@ -37,7 +37,7 @@ header {
     height: 60px;
     width: 110px;
     border-radius: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     user-select: none;
     border: 2px solid transparent;
     display: flex;
@@ -62,12 +62,12 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 60px;
+
 }
 .icon_profile {
+    margin: 5px;
     height: 150px;
     width: 150px;
-    border: 3px solid #AA912B;
     border-radius: 50%;
 }
 h1 {
@@ -76,10 +76,10 @@ h1 {
     font-size: 1.5rem;
 }
 .emphasis {
-    color: #AA912B;
+    color: #CCC3B2;
 }
 .emphasis-italic {
-    color: #AA912B;
+    color: #CCC3B2;
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: italic;
@@ -92,6 +92,9 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    font-family: "Solway", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 .feature {
     display: flex;
@@ -124,7 +127,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 2px solid white;
+    border-left: 2px solid rgb(0, 0, 0);
     padding-left: 15px;
 }
 .feature_information > p {
@@ -133,6 +136,32 @@ h1 {
     font-size: 16px;
 }
 
+
+.current_features  {
+
+    display: flex;
+    justify-content: end;
+    margin-right: 18.11vw;
+
+}
+.current_features > ul{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Solway", serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    color: #CCC3B2;
+    gap: 15px;
+}
+#content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
 @media (max-width: 1370px)  {
     body {
         gap: 60px;

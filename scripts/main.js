@@ -1,8 +1,11 @@
-const about_me = document.getElementById('about-me')
-const projects = document.getElementById('projects')
-const contact = document.getElementById('contact')
+const about_me = document.getElementById('about-me');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contact');
+const content = document.getElementById('content');
 let currentPageId = about_me.id;
-let url = 'percyw15.tech'
+
+
+
 function getPage(id) {
     console.log(id,currentPageId)
     if (id == currentPageId) {
@@ -12,19 +15,21 @@ function getPage(id) {
     else {
         document.getElementById(id).style.border = "2px solid white";
         document.getElementById(currentPageId).style.border = "2px solid transparent";
-        fetch(`https://${url}/pages/${id}.html`)
+        fetch(`${BASE_URL}/pages/${id}.html`)
             .then(response => response.text())
             .then(data => {
-                document.getElementById('content').innerHTML = data;
+                content.innerHTML = data;
             })
             .catch(error => console.error('Erro ao carregar o HTML:', error));
         currentPageId = id;
     }
 
 }
+;
 
 about_me.addEventListener('click',function(a,b,c){
     getPage(about_me.id)
+    currentFeatures.featurePage = 1
 });
 
 projects.addEventListener('click',function(){
@@ -35,7 +40,7 @@ contact.addEventListener('click',function(){
    getPage(contact.id);
     
 });
-fetch(`https://${url}/pages/about-me.html`)
+fetch(`${BASE_URL}/pages/about-me.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
@@ -45,4 +50,4 @@ fetch(`https://${url}/pages/about-me.html`)
 self.addEventListener('install', event =>{
     event.waitUntil()
     cashes.open('')
-})
+});
