@@ -1,6 +1,8 @@
-const about_me = document.getElementById('about-me')
-const projects = document.getElementById('projects')
-const contact = document.getElementById('contact')
+const about_me = document.getElementById('about-me');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contact');
+const content = document.getElementById('content');
+const buttonSound = new Audio('../assets/header/button sound.wav');
 let currentPageId = about_me.id;
 let url = 'percyw15.tech'
 function getPage(id) {
@@ -10,15 +12,19 @@ function getPage(id) {
 
     }
     else {
+        buttonSound.currentTime = 0;
+        buttonSound.play();
+        
         document.getElementById(id).style.border = "2px solid white";
         document.getElementById(currentPageId).style.border = "2px solid transparent";
-        fetch(`https://${url}/pages/${id}.html`)
+        fetch(`http://${BASE_URL}/pages/${id}.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
             })
             .catch(error => console.error('Erro ao carregar o HTML:', error));
         currentPageId = id;
+        
     }
 
 }
@@ -35,14 +41,10 @@ contact.addEventListener('click',function(){
    getPage(contact.id);
     
 });
-fetch(`https://${url}/pages/about-me.html`)
+fetch(`http://${BASE_URL}/pages/about-me.html`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('content').innerHTML = data;
             })
             .catch(error => alert('Erro ao carregar o HTML:', error));
 
-self.addEventListener('install', event =>{
-    event.waitUntil()
-    cashes.open('')
-})
